@@ -1,5 +1,4 @@
-psql -U postgres
+#!/bin/bash
 
-CREATE USER generic_username WITH PASSWORD 'insecure_password';
-
-CREATE DATABASE springboot_psql_demo OWNER generic_username;
+psql -U postgres -c "CREATE USER generic_username WITH PASSWORD 'insecure_password';"
+psql -U postgres -c "CREATE DATABASE springboot_psql_demo OWNER generic_username;"
